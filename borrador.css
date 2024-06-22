@@ -1,0 +1,373 @@
+/* Hard Reset */
+/* Reset */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+/* definir las variables en el css */
+:root {
+/* definicion de colores */
+    --pampas: #f8f7f4;
+
+    --body-fs: 1.6rem;
+    --header-bg-color: var(--main-bg-color);
+    --header-fs: 1.4rem;
+    --header-p: 4rem;
+    --header-h: 10rem;
+    --header-a: 1.6rem;
+    --header-link-color: #000;
+    --html-font-size: 62.5%;
+
+    --main-bg-color:var(--pampas);
+
+    --search-bg: #fff;
+    --search-icon-fill: #6e6d7a;
+    --search-br: 2.4rem;
+    --search-w: 28.5rem;
+
+    --menu-der-h: 4.8rem;   
+}
+
+/* configuracin de estilos */
+html { /* configuracin para establecer el tamaño de las etiquetas */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    /* font-size: 16px; -> 10px;*/
+    font-size: var(--html-font-size);  
+          
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--body-fs)
+    /*1.6 x 10px = 16px */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    padding: 0 var(--header-p);
+    height: var(--header-h);
+    font-size: var(--header-fs); /*1.4 x 10px = 14px */
+    font-weight: bold;
+    background-color: var(--header-bg-color);
+
+}
+
+header ul {   /* a todo lu dentro del header se les agrega estas propiedades */
+    flex: 1; /* va a utilizar el mayor espacio en el cual pueda crecer */
+    list-style-type:none; /* quita los puntos de una lista desordenada */
+}
+
+header ul li a { /* todo a que esta dentro del li que a su vez esta dentro de una ul que se encientra dentro dl header, se aplican estas clases */
+    color: var(--header-link-color);
+    padding-left: var(--header-a);
+    padding-right: var(--header-a);
+    text-decoration: none;
+}
+
+.menu-izq {
+    display: flex;
+}
+
+.menu-der {
+    display: flex;
+    height: var(--menu-der-h);
+    justify-content: flex-end;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    width: var(--search-w);
+    background-color: var(--search-bg);
+    border-radius: var(--search-br);
+    padding: 0 2.4rem;
+}
+
+.search > input {
+    border: none;
+    background-color: transparent;
+}
+
+.search > input:focus {
+    border: none;         
+    outline: none;  /* se utilizo para quitar el border del search */
+}
+
+.search-icon {
+    margin-right: 1rem;
+    height: 1.6rem;
+    width: 1.6rem;
+    fill: var(--search-icon-fill);   /* fill sirve para colorear el logo svg de busqueda la lupa */ 
+
+}
+
+.login {
+ /* asignele al margin de arriba y bajo 0px y a la izquierda y derecha 2 rem */
+    margin: 0 2rem; 
+    align-items: center;  
+    justify-content: center;
+    display: flex;
+    font-size: 1.3rem;
+
+}
+
+.sing {
+    width: 10rem;  /* asignele un ancho de 100px = 10rem */
+    height: 4.8rem; /* asignele un alto de 48px = 4.8rem */
+    padding: 0 2.4rem; /* asignele un padding arriba y abajo de 0 e izquierda y derecha de 24px o 2.4rem*/
+    color: #fff;
+    background-color: #0d0c22;
+    font-size: 1.3rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+    text-decoration: none;
+}
+
+.sing:hover {
+    background-color: #808080;
+}
+
+header img {
+    margin: 0 2rem
+}
+
+.hero {
+    margin: 0 auto;
+    padding-top: 8rem;
+    width: 126.3rem;
+    height: 50rem;   /* desde clase tenia 38rem, le puse 50rem para poder solucionar el problema */
+}
+
+.hero-container {
+    display: flex;
+    height: 100%; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.hero-container > h5 {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    padding: 1rem 1.6rem;
+    border-radius: 2rem;
+    background-color: #ffda79;
+}
+
+.H2 {
+    width: 87rem;  /* asignele un ancho de 870px = 8.7rem */
+    color: #0d0c22;
+    font-size: 7.6rem;  /* font-size para ajustar el tamaño del texto */ 
+    margin: 4rem 16.5rem 2.4rem;  /* aplica margen 4rem superior,16.5rem izquierda y derecha 2.4rem abajo si quito la margen el boton queda bien*/ 
+    line-height: 7.6rem;   /* establece la altura de cada linea que forma el contenido de texto de un elemento */
+    font-weight: 400; /* para especificar el peso de la fuente,ancho de la letra*/
+    text-align: center;  /* estable la alineacion del texto*/
+}
+
+.H3 {
+    width: 80.7rem;  /* asignele un ancho de 807px = 80.7rem */
+    font-size: 2rem;  /* font-size para ajustar el tamaño del texto */
+    line-height: 3.6rem;  /* establece la altura de cada linea que forma el contenido de texto de un elemento */
+    font-weight: 500;     /* para especificar el peso de la fuente,ancho de la letra*/
+}
+
+.get {
+    width: 12.5rem;   /* asignele un ancho de 125px = 12.5rem */
+    height: 5.6rem;
+    margin: 3.2rem 0 0; 
+    padding: 0 2.4rem;
+    color:#ffffff;
+    background-color: #0d0c22;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+    text-decoration: none;
+}
+
+.get:hover {
+    background-color: #808080;
+}
+
+.presentacion {     
+    margin-top: 4rem;  
+    margin-bottom: 4rem;/* Section: contenedor padre que contiene a todas las targetas*/
+    display: flex;    /* puso las targetas de forma horizontal, al inicio estaban todas verticales*/
+    /* overflow-x: auto;  clase nueva: significa que agregara una barra de desplazamiento al elemento solo si el contenido se sale de los limites del contenedor, si lo descomento la barra de scroll horizontal queda exactamente debajo de las targetas, asi comentado la barra de scroll queda al final de la pagina*/
+     gap: 1rem;   /* espacio entre las cajas o puedo poner jsutify content: space-between*/
+    padding: 1rem;  /* margen interna del contenedor */
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    justify-content: space-between;   
+}
+
+.targeta {
+    flex: 0 0 auto;   /* no permite quelas targetas se vuelvan pequeñas y asegura que sigan siendo horizontales  */
+    width: 27.3rem;
+    height: 34rem;
+    position: relative;
+    background-color: #808080;
+    border-radius: 2.5rem;
+    color: #000;
+    margin: 0 auto;
+   /* top: 50%;                        reviar estos 2 renglones en que afecta cuando quiero poner las demas targetas*/
+   /* transform: translate(-50%); */
+}
+
+.info {
+    
+    position: absolute;              /* averiguar que hace esto cuando haga las demas targetas */
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 0;
+
+}
+
+.skill {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+    padding: .5rem 0;
+    align-items: center;
+    font-size: 1.2rem;
+    
+}
+
+.li {
+    padding: .5rem .5rem;
+    border-radius: 2rem;
+    border: .1rem solid #000;
+    width: 6.5rem;
+    text-align: center;
+    color: #000;
+    font-size: 1.2rem;
+    background-color: #808080;
+}
+
+.li:hover {
+    background-color: #fff;
+}
+
+.h3 {
+    margin-bottom: 1rem;
+}
+
+.div {
+    margin-bottom: 1rem;
+}
+
+.foto { /* se creo la clase foto y le dimos un alto y ancho de 100% para que ocupara el espacio de la caja que se delimito en .targeta*/
+    width: 100%;
+    height: 100%;
+    border-radius: 2.5rem;
+    box-shadow: 1rem .7rem 1rem red;
+}
+
+/* seccion previa al footer */
+
+.sec {
+    padding-top: 12rem;
+    margin: 0 auto;
+    background-color: #ffda79;
+}
+
+.pre {
+    width: 126.4rem;
+    height: 45.6rem;
+    font-size: 1.6rem;
+    margin: 0 auto;
+    gap: 2.4rem;
+    padding: 0 3.2rem;
+    
+}
+
+.h1 {
+    width: 68rem;
+    height: 14.4rem;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6.4rem;
+    color: #0d0c22;
+    line-height: 7.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+.h5 {
+    width: 68rem;
+    height: 10.8rem;
+    margin: 2rem auto;
+    font-size: 2.5rem;
+    color: #0d0c22;
+    line-height: 3.6rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.botones {
+    height: 8rem;           /* modifica el alto de la caja padre */
+    padding: 2rem;
+    display: flex;            /* todas las propiedades se aplican a la caja padre de los 2 botones*/
+    justify-content: center; /* para que os botones queden en la mitad de la caja*/
+    gap: 1.5rem; /* deja un espacio de 15rem entre botones*/
+    margin: 0 5rem; /* se aplia una margen de 0rem arriba-abajo y 5rem iquierda-derecha*/
+}
+
+.Gsn {
+    width: 15.8rem;  /* asignele un ancho de 158px = 15.8rem */
+    height: 4.5rem; /* asignele un alto de 45px = 4.5rem */
+    color: #fff;
+    background-color: #0d0c22;
+    font-size: 1.3rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+    text-decoration: none;
+}
+
+.Gsn:hover{
+    background-color: #808080;
+}
+
+.learn {
+    width: 17.2rem;  /* asignele un ancho de 100px = 10rem */
+    height: 4.5rem; /* asignele un alto de 48px = 4.8rem */
+    color:#0d0c22;
+    background-color: #fff ;
+    font-size: 1.3rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+    text-decoration: none;
+}
+
+.learn:hover {
+    color: red;
+}
+
+.join {
+     display:flex;
+    justify-content: center;  /* deja todo en la mitad de la caja */
+    color: #0d0c22;
+    font-size: 2rem;          /* tamaño de la letra */
+    font-weight: 400;        /* ancho de la letra */
+    gap: 1.6rem;           /* espacio entre las palabras*/
+    margin: 2rem 40rem;  /* se aplico margen 2rem arriba-abajo y 40 rem izquierda-derecha*/
+
+}
